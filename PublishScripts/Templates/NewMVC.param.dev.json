@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "MinhNewMVC"
+  },
+  "hostingPlanName": {
+    "value": "lab6plan"
+  },
+  "siteLocation": {
+    "value": "East US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "0334d55c-0f95-4872-a14c-63b9fa672527"
+  },
+  "resourceGroup": {
+    "value": "lab6group"
+  }
+}
