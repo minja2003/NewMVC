@@ -19,6 +19,18 @@ namespace NewMVC.Models
             var Tr = dbContext.Trips.Include(a => a.Stops);
             return Tr;
         }
+
+        public Trip GetTrip(int id)
+        {
+            var Trs = dbContext.Trips.Where(a => a.TripID == id).Single();
+            return (Trs);
+        }
+
+        public void AddTrip(Trip trip)
+        {
+            dbContext.Add(trip);
+            
+        }
     }
    
 }

@@ -1,6 +1,17 @@
-﻿namespace NewMVC.ViewModels
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace NewMVC.ViewModels
 {
     public class StopViewModel
     {
+        public int ID { get; set; }
+        [Required(ErrorMessage = "Please Enter Name")]
+        [StringLength(255, MinimumLength = 5)]
+        public string Name { get; set; }
+        public double Longitude { get; set; }
+        public double Latitude { get; set; }
+        [Required(ErrorMessage = "Please Enter Arrival Date")]
+        public DateTime Arrival { get; set; }
     }
 }

@@ -11,6 +11,9 @@ using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using MVC6.Models;
+using AutoMapper;
+using NewMVC.ViewModels;
+using NewMVC.Services;
 
 namespace NewMVC
 {
@@ -28,6 +31,7 @@ namespace NewMVC
             );
             services.AddTransient<TripsSeedData>();
             services.AddScoped<TripsRepository>();
+            services.AddScoped<CoordinateService>();
 
 
         }
@@ -53,6 +57,12 @@ namespace NewMVC
             });
 
             seed.InsertSeedData();
+            Mapper.Initialize(config =>
+            {
+                config.CreateMap<Trip, TripViewModel>().ReverseMap();
+            }
+);
+
         }
 
         // Entry point for the application.
